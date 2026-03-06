@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador QKD</title>
+
+    <!-- Links  -->
+    <link rel="stylesheet" href="src/assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="src/assets/css/style.css">
+    <!-- <link rel="stylesheet" href="src/assets/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="src/assets/fontawesome/css/solid.css">
+    <link rel="stylesheet" href="src/assets/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="src/assets/fontawesome/css/regular.css"> -->
+    <link rel="stylesheet" href="src/assets/fontawesome/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">
+                Simulador de QKD
+                <p class="subtitle">Simule a distribuição de chaves quânticas</p>
+            </h1>
+        </div>
+        <main>
+            <div class="main-content row">
+                <!-- configuration content -->
+                <div class="config-content col-md-5 col-sm-5">
+                    <div class="config-card">
+                        <div class="card">
+                            <div class="card-header">
+                                <span>
+                                    <i class="fas fa-sliders-h"></i>
+                                    Configurações
+                                </span>
+                            </div>
+                            <form>
+                                <fieldset>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="qubits_input" class="form-label">
+                                            <span><i class="fas fa-atom"></i></span>
+                                            Qubits
+                                            <span class="info"><i class="far fa-question-circle"></i></span>
+                                        </label>
+                                        <input type="text" class="form-control" id="qubits_input" placeholder="1 - 1000">
+                                        <div class="warning-message">A quantidade informada deve estar entre 1 e 1000</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- <label for="protocol_select" class="form-label">
+                                            <span><i class="fas fa-link"></i></span>
+                                            Protocolo
+                                            <span class="info"><i class="far fa-question-circle"></i></span>
+                                        </label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select> -->
+                                    </div>
+                                    <a href="#" class="btn btn-primary d-flex justify-content-center">Simular</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- visualization content -->
+                <div class="vis-content col-md-7 col-sm-7">
+                    <div class="vis-card s">visualização</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
