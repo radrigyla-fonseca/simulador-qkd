@@ -41,35 +41,58 @@
                                         <label for="qubits_input" class="form-label">
                                             <span class="label-icon"><i class="fas fa-atom"></i></span>
                                             Qubits
-                                            <span class="info-icon"><i class="far fa-question-circle"></i></span>
+                                            <span class="warning">*</span>
+                                            <span class="info-icon">
+                                                <i class="far fa-question-circle"></i>
+                                                <div class="info-message p-1 px-2">
+                                                    <p class="m-0">Quantidade de qubits a simular</p>
+                                                </div>
+                                            </span>
                                         </label>
-                                        <input type="text" class="form-control" id="qubits_input" placeholder="1 - 1000">
-                                        <div class="warning-message">A quantidade informada deve estar entre 1 e 1000</div>
+                                        <input type="text" class="form-control is-invalid" id="qubits_input" placeholder="1 - 1000" aria-describedby="validationFeedback01">
+                                        <div id="validationFeedback01" class="invalid-feedback">A quantidade informada deve estar entre 1 e 1000</div>
+                                        <!-- <div class="warning warning-message mt-1">A quantidade informada deve estar entre 1 e 1000</div> -->
                                     </div>
                                     <div class="mb-3">
                                         <label for="protocol_select" class="form-label">
                                             <span class="label-icon"><i class="fas fa-link"></i></span>
                                             Protocolo
-                                            <span class="info-icon"><i class="far fa-question-circle"></i></span>
+                                            <span class="warning">*</span>
+                                            <span class="info-icon">
+                                                <i class="far fa-question-circle"></i>
+                                                <div class="info-message p-1 px-2">
+                                                    <p class="m-0">Tipo de protocolo a ser usado</p>
+                                                </div>
+                                                <div class="info-message"></div>
+                                            </span>
                                         </label>
                                         <select class="form-control" aria-label="Default select example" id="protocol_select">
                                             <option selected disabled>Selecionar</option>
                                             <option value="1">Padrão</option>
                                             <option value="2">Fase</option>
                                         </select>
+                                        <div id="validationFeedback02" class="invalid-feedback">Selecione um tipo de protocolo</div>
                                     </div>
                                     <div class="mb-3">
                                         <label for="sim_input" class="form-label">
                                             <span class="label-icon"><i class="fas fa-vial"></i></span>
                                             Simulações
-                                            <span class="info-icon"><i class="far fa-question-circle"></i></span>
+                                            <span class="warning">*</span>
+                                            <span class="info-icon">
+                                                <i class="far fa-question-circle"></i>
+                                                <div class="info-message p-1 px-2">
+                                                    <p class="m-0">Quantidade de simulações</p>
+                                                </div>
+                                                <div class="info-message"></div>
+                                            </span>
                                         </label>
-                                        <input type="text" class="form-control" id="sim_input" placeholder="1 - 100">
-                                        <div class="warning-message">O número de simulações informado deve estar entre 1 e 100</div>
+                                        <input type="text" class="form-control"" id="sim_input" placeholder="1 - 100" aria-describedby="validationFeedback03">
+                                        <!-- <div class="warning warning-message mt-1">O número de simulações informado deve estar entre 1 e 100</div> -->
+                                        <div id="validationFeedback03" class="invalid-feedback">O número de simulações informado deve estar entre 1 e 100</div>
                                     </div>
                                     <div class="mb-3">
                                         <ul class="list-group">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center disabled">
                                                 <div class="d-flex">
                                                     <i class="fas fa-satellite-dish label-icon me-2"></i>
                                                     <div class="item-desc">
@@ -87,7 +110,7 @@
                                                     </label>
                                                 </div>
                                             </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center disabled">
                                                 <div class="d-flex">
                                                     <i class="fas fa-shield-alt label-icon me-2"></i>
                                                     <div class="item-desc">
@@ -107,7 +130,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="#" class="btn btn-primary d-flex justify-content-center">Simular</a>
+                                    <button type="submit" class="btn btn-primary w-100">Simular</button>
                                 </div>
                             </form>
                         </div>
@@ -126,8 +149,8 @@
                                     <span>Visualização da Simulação</span>
                                 </h2>
                             </div>
-                            <div class="card-body">
-                                <p>Os resultados da simulação serão exibidos aqui</p>
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <p class="message">Os resultados da simulação serão exibidos aqui</p>
                             </div>
                         </div>
                     </div>
