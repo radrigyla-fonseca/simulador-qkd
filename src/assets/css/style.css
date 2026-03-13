@@ -1,3 +1,180 @@
 .s {
     background-color: rgba(255, 0, 0, 0.219);
 }
+
+:root {
+
+  /* LIGHT THEME */
+  
+  --background: #E9EDF2;
+  --card-color: #F5F7FA;
+  --icon-color-p: #86868699;
+  
+  /* DARK THEME */
+  
+  /* --background: #E9EDF2; */
+
+}
+
+body {
+  background-color: var(--background);
+}
+
+h1, h2 {
+  font-family: "Roboto";
+}
+
+.header .title {
+  font-family: "Roboto-Bold";
+}
+
+.title .subtitle {
+  font-size: 18px;
+  font-family: "Roboto";
+  color: #4D4D4D;
+}
+
+.btn-theme:hover {
+  background-color: #dddddd;
+}
+
+.btn-theme:active {
+  background-color: #cccccc;
+}
+
+.btn-theme i {
+  color: #8e8e8e;
+}
+
+/* CARD  */
+
+.card, .config-card {
+  border-radius: 8px !important;
+}
+
+.card-header {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.card-body {
+  border-radius: 0 0 8px 8px !important;
+}
+
+.card-header, .card-body {
+  background-color: var(--card-color);
+}
+
+.header-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.card-header span {
+  font-size: 20px;
+}
+
+/* FORM */
+
+.form-label {
+  font-size: 18px;
+}
+
+.label-icon, .info-icon{
+  color: var(--icon-color-p);
+}
+
+.label-icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.info-icon {
+  font-size: 14px;
+}
+
+/* TOGGLE  */
+
+.toggle-btn .btn {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background: #ccc;
+  border-radius: 26px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-btn input {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggle-btn .slider {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.25s;
+}
+
+.toggle-btn input:checked + .slider {
+  transform: translateX(24px);
+}
+
+.toggle-btn .btn:has(input:checked) {
+  background-color: #2D7FF9;
+}
+
+/* .disabled {
+  color: #4A4A4B;
+
+} */
+
+.list-item {
+  list-style-type: none;
+}
+
+.list-group-item {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* VISUALIZATION AREA */
+
+.visualization-card .card {
+  height: 100%;
+  flex-grow: 1;
+  /* background-color: ; */
+}
+
+.visualization-card .card-body p {
+  text-align: center;
+}
+
+
+/* FONT-FACE */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
