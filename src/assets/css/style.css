@@ -9,6 +9,11 @@
   --background: #E9EDF2;
   --card-color: #F5F7FA;
   --icon-color-p: #86868699;
+  --div-color-info: #818181;
+  --font-color-info: #ffffff;
+  --font-color-s: #4D4D4D;
+  --warning: #dc3545;
+  /* --warning-rgb: 255, 102, 102; */
   
   /* DARK THEME */
   
@@ -31,7 +36,7 @@ h1, h2 {
 .title .subtitle {
   font-size: 18px;
   font-family: "Roboto";
-  color: #4D4D4D;
+  color: var(--font-color-s);
 }
 
 .btn-theme:hover {
@@ -48,6 +53,10 @@ h1, h2 {
 
 /* CARD  */
 
+.card {
+  box-shadow: 2px 2px 10px #19191918;
+}
+
 .card, .config-card {
   border-radius: 8px !important;
 }
@@ -58,6 +67,7 @@ h1, h2 {
 
 .card-body {
   border-radius: 0 0 8px 8px !important;
+  font-family: "Inter";
 }
 
 .card-header, .card-body {
@@ -76,11 +86,16 @@ h1, h2 {
 /* FORM */
 
 .form-label {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .label-icon, .info-icon{
   color: var(--icon-color-p);
+}
+
+.list-group-icon.disabled .label-icon {
+  /* color: #dadbdc; */
+  color: #ff0000;
 }
 
 .label-icon {
@@ -90,6 +105,55 @@ h1, h2 {
 
 .info-icon {
   font-size: 14px;
+}
+
+.form-control {
+  font-size: 14px;
+}
+
+.warning {
+  color: var(--warning);
+}
+
+/* .form-control.warning-input:focus {
+  border-color: var(--warning);
+  box-shadow: 0 0 0 0.2rem rgba(var(--warning-rgb), 0.25);
+}
+
+
+.warning-input {
+  border: 1px solid var(--warning);
+}
+*/
+
+.item-subtitle {
+  font-size: 12px;
+}
+
+.message {
+  font-size: 14px;
+  color: var(--font-color-s);
+}
+
+.info-icon {
+  position: relative;
+}
+
+.info-icon:hover .info-message {
+  display: block;
+}
+
+.info-message {
+  display: none;
+  font-size: 12px;
+  color: var(--font-color-info);
+  background-color: var(--div-color-info);
+  border-radius: 4px;
+  position: absolute;
+  top: -30%;
+  left: 100%;
+  margin-left: 5px;
+  width: max-content;
 }
 
 /* TOGGLE  */
@@ -144,18 +208,26 @@ h1, h2 {
   background: none;
 }
 
+.item-title {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.list-group-item.disabled {
+  background: none;
+}
+
 /* VISUALIZATION AREA */
+
+.visualization-card {
+  height: 100%;
+}
 
 .visualization-card .card {
   height: 100%;
   flex-grow: 1;
   /* background-color: ; */
 }
-
-.visualization-card .card-body p {
-  text-align: center;
-}
-
 
 /* FONT-FACE */
 
