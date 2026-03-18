@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="src/assets/css/style.css">
     <link rel="stylesheet" href="src/assets/fontawesome/css/all.css">
+    <link rel="icon" href="src/assets/images/icons/atom-icon.svg">
 </head>
 <body>
     <div class="container mb-4">
@@ -17,16 +18,11 @@
                 Simulador de QKD
                 <p class="subtitle mt-2">Simule a distribuição de chaves quânticas</p>
             </h1>
-            <div class="tools mt-2">
-                <div class="btn btn-theme">
-                    <i class="fas fa-moon"></i>
-                </div>
-            </div>
         </header>
         <main>
             <div class="main-content row">
                 <!-- configuration content -->
-                <div class="config-content col-md-5 col-sm-5">
+                <div class="config-content col-md-5 col-sm-12 mb-3">
                     <div class="config-card">
                         <div class="card">
                             <div class="card-header">
@@ -51,7 +47,6 @@
                                         </label>
                                         <input type="text" class="form-control is-invalid" id="qubits_input" placeholder="1 - 1000" aria-describedby="validationFeedback01">
                                         <div id="validationFeedback01" class="invalid-feedback">A quantidade informada deve estar entre 1 e 1000</div>
-                                        <!-- <div class="warning warning-message mt-1">A quantidade informada deve estar entre 1 e 1000</div> -->
                                     </div>
                                     <div class="mb-3">
                                         <label for="protocol_select" class="form-label">
@@ -87,7 +82,6 @@
                                             </span>
                                         </label>
                                         <input type="text" class="form-control"" id="sim_input" placeholder="1 - 100" aria-describedby="validationFeedback03">
-                                        <!-- <div class="warning warning-message mt-1">O número de simulações informado deve estar entre 1 e 100</div> -->
                                         <div id="validationFeedback03" class="invalid-feedback">O número de simulações informado deve estar entre 1 e 100</div>
                                     </div>
                                     <div class="mb-3">
@@ -136,11 +130,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- visualization content -->
-                <!-- <div class="vis-content col-md-7 col-sm-7">
-                    <div class="vis-card s">visualização</div>
-                </div> -->
-                <div class="visualization-content col-md-7 col-sm-7">
+                <!-- visulization content -->
+                <div class="visualization-content col-md-7 col-sm-12">
                     <div class="visualization-card">
                         <div class="card rounded">
                             <div class="card-header">
@@ -157,10 +148,6 @@
                 </div>
             </div>
         </main>
-
-        <footer>
-            <!-- footer here -->
-        </footer>
     </div>
 </body>
 </html>
